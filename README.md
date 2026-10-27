@@ -24,3 +24,19 @@ not exact guarantees. The truncated-normal mean is not exactly 60.
 
 Source: MIT. Historical scripts are retained as entry point names; they now
 share the corrected model instead of relying on module-global distribution names.
+
+## Project overview
+
+Reproducible Python M/G/1 simulations with two random generators and an analytical reference.
+
+![FCFS Queue Simulation — Time is measured in seconds. The constant-service example is M/D/1 with utilization 0.5 and an analytical mean system time of 90 s.](docs/assets/presentation/overview.svg)
+
+Time is measured in seconds. The constant-service example is M/D/1 with utilization 0.5 and an analytical mean system time of 90 s.
+
+### Computed example
+
+![Reproducible computed example](docs/assets/presentation/queue-example.svg)
+
+Computed from `queue_model.py` and `own.py`, seed 42, with 1,000 warm-up arrivals. The dashed line is the analytical M/D/1 mean system time of 90 s. These are simulated observations, not field measurements.
+
+Regenerate with `python docs/assets/presentation/render_example.py` after installing the optional plotting dependency `matplotlib`. The source data is stored beside the plot.
